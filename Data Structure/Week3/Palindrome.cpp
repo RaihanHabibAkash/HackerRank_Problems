@@ -72,7 +72,7 @@ void insertAtTail(Node* &head, Node* &tail, int value) {
 }
 
 bool isPal(Node* left, Node* right) {
-    if(left == right) return true;
+    if(left == right || left->prev == right) return true;
 
     return (left->val == right->val) && isPal(left->next, right->prev);
 }
