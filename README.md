@@ -1,7 +1,13 @@
-"# C++"
-1. https://www.hackerrank.com/contests/mid-term-a-introduction-to-c-for-dsa/challenges
-2. https://www.hackerrank.com/contests/final-exam-a-introduction-to-c-for-dsa-a-batch-06/challenges
+# Phitron
 
-"# Data Structure" 
-1. https://www.hackerrank.com/assignment-01-a-basic-data-structure-a-batch-06
-2. https://www.hackerrank.com/contests/assignment-02-a-basic-data-structures-a-batch-06/challenges
+<!-- C++ -->
+[Week 1](https://www.hackerrank.com/contests/mid-term-a-introduction-to-c-for-dsa/challenges)
+
+[Week 2](https://www.hackerrank.com/contests/final-exam-a-introduction-to-c-for-dsa-a-batch-06/challenges)
+
+<!-- Data Structure  -->
+[Week 1](https://www.hackerrank.com/assignment-01-a-basic-data-structure-a-batch-06)
+
+[Week 2](https://www.hackerrank.com/contests/assignment-02-a-basic-data-structures-a-batch-06/challenges)
+
+[Week 3](https://www.hackerrank.com/contests/mid-term-exam-a-basic-data-structures-a-batch-06/challenges)
