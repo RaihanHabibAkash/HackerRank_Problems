@@ -1,3 +1,30 @@
+/*
+You will be given a binary tree as input in level order. You need to output the sum of all node's values in that tree except the leaf nodes.
+
+For example:
+
+image
+
+The output for the above tree will be: 60
+
+Input Format
+
+Input will contain the binary tree in level order.  means there is no node available.
+Constraints
+
+ Maximum number of nodes 
+ Node's value 
+Output Format
+
+Output the total sum of that tree except the leaf nodes.
+Sample Input 0
+
+10 20 30 40 50 -1 60 -1 -1 -1 -1 -1 -1
+Sample Output 0
+
+60
+*/
+// https://www.hackerrank.com/contests/assignment-04-a-basic-data-structure-a-batch-06/challenges 
 #include <bits/stdc++.h>
 using namespace std;
 
