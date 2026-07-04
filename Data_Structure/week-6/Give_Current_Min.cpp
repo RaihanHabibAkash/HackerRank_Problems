@@ -75,91 +75,35 @@ Sample Output 1
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<int> minStack;
-
-void upHeapify() {
-    int curIdx = minStack.size()-1;
-
-    while(curIdx > 0) {
-        int parIdx = (curIdx-1)/2;
-        if(minStack[parIdx] > minStack[curIdx])
-            swap(minStack[parIdx], minStack[curIdx]);
-        else break;
-
-        curIdx = parIdx;
-    }
-}
-
-void downHeapify(int index) {
-    int parIdx = index;
-
-    while(minStack.size() > 1) {
-        int leftIdx = parIdx*2+1,
-            rightIdx = parIdx*2+2,
-            minIdx = parIdx;
-
-        if(leftIdx < minStack.size() && minStack[minIdx] > minStack[leftIdx])
-            minIdx = leftIdx;
-        if(rightIdx < minStack.size() && minStack[minIdx] > minStack[rightIdx])
-            minIdx = rightIdx;
-        
-        // If the minIdx was not change means no swap
-        if(minIdx == parIdx) break;
-        
-        swap(minStack[minIdx], minStack[parIdx]);
-        parIdx = minIdx;
-    }
-}
-
-void arrToMinHeap() {
-    int lastNonLeafNd = minStack.size()/2-1;
-    for(int i = lastNonLeafNd; i >= 0; i--) downHeapify(i);
-}
-
-void printMin() {
-    if(minStack.empty()) cout << "Empty" << endl;
-    else cout << minStack[0] << endl;
-}
-
-void dlt() {
-    if(minStack.empty()) {
-        cout << "Empty" << endl;
-        return;
-    }
-    else if(minStack.size() == 1) {
-        minStack.pop_back();
-        cout << "Empty" << endl;
-        return;
-    }
-
-    minStack[0] = minStack[minStack.size()-1];
-    minStack.pop_back();
-
-    downHeapify(0);
-    printMin();
-}
-
-void insert() {
-    int val; cin >> val;
-    minStack.push_back(val);
-    upHeapify();
-    printMin();
-}
-
 int main() {
     int n; cin >> n;
+    priority_queue<int, vector<int>, greater<int>> pq;
+
     for(int i = 0; i < n; i++) {
         int val; cin >> val;
-        minStack.push_back(val);
+        pq.push(val);
     }
-    arrToMinHeap();
     
     int queries; cin >> queries;
     while(queries--) {
         int x; cin >> x;
-        if(x == 0) insert();
-        else if(x == 1) printMin();
-        else if(x == 2) dlt(); 
+        if(x == 0) {
+            int val; cin >> val;
+            pq.push(val);
+            cout << pq.top() << endl;
+        }
+        else if(x == 1) {
+            if(pq.empty()) cout << "Empty" << endl;
+            
+            cout << pq.top() << endl;
+        }
+        else if(x == 2) {
+            if(pq.empty()) cout << "Empty" << endl;
+            pq.pop();
+
+            if(pq.empty()) cout << "Empty" << endl;
+            else cout << pq.top() << endl;
+        } 
     } 
 
     return 0;
