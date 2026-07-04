@@ -94,11 +94,13 @@ int main() {
         }
         else if(x == 1) {
             if(pq.empty()) cout << "Empty" << endl;
-            
-            cout << pq.top() << endl;
+            else cout << pq.top() << endl;
         }
         else if(x == 2) {
-            if(pq.empty()) cout << "Empty" << endl;
+            if(pq.empty()){
+                cout << "Empty" << endl;
+                continue;
+            }
             pq.pop();
 
             if(pq.empty()) cout << "Empty" << endl;
