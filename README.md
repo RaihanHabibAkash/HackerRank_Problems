@@ -17,3 +17,7 @@
 [Week 5](https://www.hackerrank.com/contests/assignment-04-a-basic-data-structure-a-batch-06/challenges)
 
 [Week-6](https://www.hackerrank.com/contests/final-exam-a-basic-data-structure-a-batch-06/challenges)
+
+<!-- Algorithams -->
+
+[Week 1](https://www.hackerrank.com/contests/assignment-01-a-introduction-to-algorithms-a-batch-06/)
