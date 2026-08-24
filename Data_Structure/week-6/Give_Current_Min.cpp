@@ -92,20 +92,8 @@ int main() {
             pq.push(val);
             cout << pq.top() << endl;
         }
-        else if(x == 1) {
-            if(pq.empty()) cout << "Empty" << endl;
-            else cout << pq.top() << endl;
-        }
-        else if(x == 2) {
-            if(pq.empty()){
-                cout << "Empty" << endl;
-                continue;
-            }
-            pq.pop();
-
-            if(pq.empty()) cout << "Empty" << endl;
-            else cout << pq.top() << endl;
-        } 
+        else if(x == 1) printMin();
+        else if(x == 2) dlt(); 
     } 
 
     return 0;
